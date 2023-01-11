@@ -7,7 +7,7 @@ class AuthorsController < ApplicationController
   end
 
   def create
-    author = Author.create(author_params)
+    author = Author.create!(author_params)
     if author.isvalid?
       render json: author, :content_found
     end
